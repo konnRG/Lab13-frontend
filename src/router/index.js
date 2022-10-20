@@ -71,8 +71,8 @@ const routes = [
     path: '/add-event',
     name: 'AddEvent',
     component: AddEvent,
-    beforeEnter: () => {
-      return OrganizerService.getOrganizers()
+    beforeEnter: (to) => {
+      return OrganizerService.getOrganizers(to.params.id)
         .then((response) => {
           GStore.organizers = response.data
         })

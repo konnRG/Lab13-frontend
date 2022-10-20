@@ -1,6 +1,7 @@
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { FontAwesomeIcon } from './plugins/font-awesome.js'
+import '@/services/AxiosInterceptorSetup.js'
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
