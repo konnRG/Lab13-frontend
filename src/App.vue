@@ -44,7 +44,7 @@ export default {
   inject: ['GStore'],
   computed: {
     currentUser() {
-      return AuthService.getUser()
+      return localStorage.getItem('user')
     },
     isAdmin() {
       return AuthService.hasRoles('ROLE_ADMIN')
